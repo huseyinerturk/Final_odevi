@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Kitap Sayfası</h3>
+
+{% for k in veri %}
+
+<div>
+  <hr style="margin-top: 0.5em; margin-bottom: 0.5em; display: block; size: 100dvh;">
+  <div class="card-body" >
+    
+    <div class="col-sm-8" id="bookCard">
+      
+      <tr>
+        <th>
+          <h3 class="card-title">{{k[1]}}</h3>
+        </th>
+      <tr>
+        <th>
+          <b>Yazar:</b>{{k[2]}}
+        </th>
+        <th >
+          <b>Basım Yılı:</b>{{k[3]}}
+        </th>
+      </tr>
+
+      </tr>
+    </div>
+    
+    <div class="col-sm-4" id="buttons" >
+      
+      <tr>
+        <a href="/kitapEdit/{{k[0]}}" class="btn btn-success">GÜNCELLE</a>
+        <a href="/kitapDetay/{{k[0]}}" class="btn btn-info">DETAY</a>
+        <a href="/kitapSil/{{k[0]}}" class="btn btn-danger">SİL</a>
+
+        {% if k[4] == 0 %}
+        <a href="/kitapOku/{{k[0]}}" class="btn btn-warning">OKUNDU</a>
+        {% endif %}
+
+      </tr>
+      
+    </div>
+
+
+  </div>
+  
+</div>
+
+{%endfor%}
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Okunanlar</h3>
+<hr style="margin-top: 0.5em; margin-bottom: 0.5em; display: block; size: 100dvh;">
+{% for d in datas %}
+<div>
+
+  
+  <div class="card-body">
+    <div>
+      {% if d[4] == 1 %}
+      <tr>
+        <th>
+          <h3 class="card-title">{{d[1]}}</h3>
+        </th>
+      <tr>
+        <th class="card-text">
+          <b>Yazar:</b>{{d.2}}</h3>
+        </th>
+
+
+        <th class="card-text">
+          <b>Basım Yılı:</b>{{d.3}}</h3>
+      </tr>
+
+      <tr>
+      </tr>
+      
+      {% endif %}
+      
+    </div>
+    <br>
+  </div>
+</div>
+
+{% endfor %}
+{% endblock %}

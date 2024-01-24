@@ -1,0 +1,28 @@
+{% include "parts/_header.html"%}
+{%include "parts/_menu.html"%}
+<div class="container-fluid text-center" style="padding-left: 5%;" >    
+    <div class="row content"style="display:contents;" >
+      <div class="col-sm-2 item" id="sideBar" >
+        <ul class="nav navbar-nav" id="item">
+          <li><a style="color: white;" href="/">Ana Sayfa</a></li>
+          <li><a style="color: white;" href="/kitap">Kitap</a></li>
+          <li><a style="color: white;" href="/contact">İletişim</a></li>
+          <li><a style="color: white;" href="/kitap_ekle">Kitap Ekle</a></li>
+          <li><a style="color: white;" href="/okunanlar">Okunanlar</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-8 text-left" style="padding-left: 5%;"> 
+        {% block content %}
+        {% endblock %}
+      </div>
+      <div class="col-sm-2 sideBar" style="margin-left: 2%;">
+        <div class="well">
+          <h4>Hakkında</h4>
+          <hr>
+          <p style="text-align: start;">Merhaba, ben Hüseyin ERTÜRK. Uşak Üniversitesi Elektrik Elektronik Mühendisliği Bölümünde okuyorum.<br> Yazılım ve tasarım konusunda tutkulu bir mühendis adayıyım. </p>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+{% include "parts/_footer.html"%}

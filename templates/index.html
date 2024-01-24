@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+        <ul>
+        {% for d in data %}
+        <li><h4>{{d[1]}}</h4></li>
+            
+        {%endfor%}
+        </ul>
+{% endblock %}

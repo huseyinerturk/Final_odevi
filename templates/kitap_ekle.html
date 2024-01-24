@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Kitap Ekleme</h1>
+<div class="col-sm4">
+    <form method="post">
+        <input type="text" class="form-control" placeholder="Kitap Adı" aria-label="Kitap Adı"
+            aria-describedby="basic-addon2" name="bookTitle">
+        <input type="text" class="form-control" placeholder="Yazar Adı" aria-label="Yazar Adı"
+            aria-describedby="basic-addon2" name="bookAuthor">
+        <input type="text" class="form-control" placeholder="Basım Tarihi" aria-label="Basım Tarihi"
+            aria-describedby="basic-addon2" name="bookYear">
+        <input type="submit" class="btn btn-primary" value="Ekle">
+
+    </form>
+</div>
+
+{% endblock %}

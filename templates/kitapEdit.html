@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="post">
+    <input type="hidden" name="id" value="{{data[0]}}"><br>
+    <label> Kitap Adı:</label>
+    <input type="text" class="form-control" name="bookTitle" value="{{data[1]}}">
+    <label> Yazar:</label>
+    <input type="text" class="form-control" name="bookAuthor" value="{{data[2]}}">
+    <label> Basım Yılı:</label>
+    <input type="text" class="form-control" ame="bookYear" value="{{data[3]}}"><br>
+    <input type="submit" class="btn btn-primary" value="Güncelle">
+</form>
+
+{% endblock %}
